@@ -13,4 +13,5 @@ app.use("/api/teachers",require("./routes/teachers"))
 app.use("/api/subjects",require("./routes/subjects"))
 app.use("/api/batches",require("./routes/batches"))
 app.use("/api/lectures",require("./routes/lectures"))
-app.listen(5678, () => console.log('Server started at http://localhost:5678'))
+let PORT = process.env.PORT || 5678;
+app.listen(PORT, () => console.log('Server started at http://localhost:5678'))
